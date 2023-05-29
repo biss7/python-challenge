@@ -41,16 +41,16 @@ txtloc=os.path.join(os.getcwd(),"analysis","results.txt")
 
 #print the analysis results to a txt file
 with open(txtloc,"w") as wfile:
-    wfile.writelines("Election Results\n")
-    wfile.writelines("-------------------------\n")
-    wfile.writelines(f"Total Votes: {total}\n")
-    wfile.writelines("-------------------------\n")
+    wfile.write("Election Results\n")
+    wfile.write("-------------------------\n")
+    wfile.write(f"Total Votes: {total}\n")
+    wfile.write("-------------------------\n")
     for candidate in votes:
         perc=round(100*votes[candidate]/total,3)
         wfile.write(f"{candidate}: {perc}% ({votes[candidate]})\n")  
-    wfile.writelines("-------------------------\n")
-    wfile.writelines(f"Winner: {winner}\n")
-    wfile.writelines("-------------------------\n")
+    wfile.write("-------------------------\n")
+    wfile.write(f"Winner: {winner}\n")
+    wfile.write("-------------------------\n")
 
 #print the analysis results to the terminal
 with open(txtloc,"r") as analysis:

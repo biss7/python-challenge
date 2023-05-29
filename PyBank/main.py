@@ -57,13 +57,13 @@ txtloc=os.path.join(os.getcwd(),"analysis","results.txt")
 
 #print the analysis results to a txt file
 with open(txtloc,"w") as wfile:
-    wfile.writelines("Financial Analysis\n")
-    wfile.writelines("----------------------------\n")
-    wfile.writelines(f"Total Months: {lncount}\n")
-    wfile.writelines(f"Total: ${lntotal}\n")
-    wfile.writelines(f"Average Change: ${chave}\n")
-    wfile.writelines(f"Greatest Increase in Profits: {chmax['DATE']} (${chmax['CHANGE']})\n")
-    wfile.writelines(f"Greatest Decrease in Profits: {chmin['DATE']} (${chmin['CHANGE']})\n")
+    wfile.write("Financial Analysis\n")
+    wfile.write("----------------------------\n")
+    wfile.write(f"Total Months: {lncount}\n")
+    wfile.write(f"Total: ${lntotal}\n")
+    wfile.write(f"Average Change: ${chave}\n")
+    wfile.write(f"Greatest Increase in Profits: {chmax['DATE']} (${chmax['CHANGE']})\n")
+    wfile.write(f"Greatest Decrease in Profits: {chmin['DATE']} (${chmin['CHANGE']})\n")
 
 #print the analysis results to the terminal
 with open(txtloc,"r") as analysis:
